@@ -10,15 +10,15 @@ app.set('view engine', 'ejs');
 const fs = require('fs')
 const http = require('http')
 const https = require('https')
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/techdudesblog.serveblog.net/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/techdudesblog.serveblog.net/fullchain.pem', 'utf8');
-const ca = fs.readFileSync('/etc/letsencrypt/live/techdudesblog.serveblog.net/chain.pem', 'utf8');
+// const privateKey = fs.readFileSync('/etc/letsencrypt/live/techdudesblog.serveblog.net/privkey.pem', 'utf8');
+// const certificate = fs.readFileSync('/etc/letsencrypt/live/techdudesblog.serveblog.net/fullchain.pem', 'utf8');
+// const ca = fs.readFileSync('/etc/letsencrypt/live/techdudesblog.serveblog.net/chain.pem', 'utf8');
 
-const credentials = {
-	key: privateKey,
-	cert: certificate,
-	ca: ca
-};
+// const credentials = {
+// 	key: privateKey,
+// 	cert: certificate,
+// 	ca: ca
+// };
 app.use(session({
     secret: 'faeb4453e5d14fe6f6d04637f78077c76c73d1b4',
     proxy: true,
@@ -184,12 +184,12 @@ app.get('/login', (req,res)=>
 	});
 // app.listen(80, () => console.log('Server is live on port 80!'))
 const httpServer = http.createServer(app);
-const httpsServer = https.createServer(credentials, app);
+// const httpsServer = https.createServer(credentials, app);
 
 httpServer.listen(80, () => {
 	console.log('HTTP Server running on port 80');
 });
 
-httpsServer.listen(443, () => {
-	console.log('HTTPS Server running on port 443');
-});
+// httpsServer.listen(443, () => {
+// 	console.log('HTTPS Server running on port 443');
+// });
