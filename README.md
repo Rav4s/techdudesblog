@@ -1,1 +1,1 @@
-# techdudes-website
+# techdudes-blog
