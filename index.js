@@ -186,7 +186,7 @@ app.get('/login', (req,res)=>
 const httpServer = http.createServer(app);
 // const httpsServer = https.createServer(credentials, app);
 
-httpServer.listen(80, () => {
+httpServer.listen(process.env.PORT, () => {
 	console.log('HTTP Server running on port 80');
 });
 
