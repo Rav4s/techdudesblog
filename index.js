@@ -10,15 +10,15 @@ app.set('view engine', 'ejs');
 const fs = require('fs')
 const http = require('http')
 const https = require('https')
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/techdudesblog.serveblog.net/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/techdudesblog.serveblog.net/fullchain.pem', 'utf8');
-const ca = fs.readFileSync('/etc/letsencrypt/live/techdudesblog.serveblog.net/chain.pem', 'utf8');
+// const privateKey = fs.readFileSync('/etc/letsencrypt/live/techdudesblog.serveblog.net/privkey.pem', 'utf8');
+// const certificate = fs.readFileSync('/etc/letsencrypt/live/techdudesblog.serveblog.net/fullchain.pem', 'utf8');
+// const ca = fs.readFileSync('/etc/letsencrypt/live/techdudesblog.serveblog.net/chain.pem', 'utf8');
 
-const credentials = {
-	key: privateKey,
-	cert: certificate,
-	ca: ca
-};
+// const credentials = {
+// 	key: privateKey,
+// 	cert: certificate,
+// 	ca: ca
+// };
 app.use(session({
     secret: 'faeb4453e5d14fe6f6d04637f78077c76c73d1b4',
     proxy: true,
