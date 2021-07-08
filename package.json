@@ -4,7 +4,7 @@
   "description": "A blog where we talk about tech",
   "main": "index.js",
   "scripts": {
-    "test": "npm index.js"
+    "start": "npm index.js"
   },
   "repository": {
     "type": "git",
